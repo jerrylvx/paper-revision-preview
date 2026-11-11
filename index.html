@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revising math papers with an AI agent</title>
+<meta name="description" content="Open-source release coming soon. Leave your email to hear when the code is published.">
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<style>
+  /* Palette, borders, radii and type scale follow the local web dashboard (dark theme only). */
+  :root {
+    color-scheme: dark;
+    --bg: #1f1f1f; --chrome: #181818; --panel: #252526; --panel-soft: #2d2d30;
+    --text: #cccccc; --muted: #9d9d9d; --border: #3c3c3c;
+    --accent: #0078d4; --accent-strong: #4fc1ff; --accent-soft: #17324d;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+         font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  h1, h2, h3, p { margin: 0; }
+  .topbar { border-bottom: 1px solid var(--border); background: var(--chrome); }
+  .topbar-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px;
+                  max-width: 720px; margin: 0 auto; padding: 14px 16px; }
+  .eyebrow { color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+  .badge { display: inline-block; border-radius: 999px; padding: 2px 8px; background: var(--accent-soft);
+           color: var(--accent-strong); font-size: 11px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  main { display: grid; gap: 16px; max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { color: var(--text); font-size: 26px; line-height: 1.2; margin-bottom: 8px; }
+  .lead { color: var(--muted); font-size: 15px; }
+  .panel { display: grid; gap: 12px; border: 1px solid var(--border); border-radius: 8px; padding: 14px;
+           background: var(--panel); box-shadow: 0 8px 22px rgb(0 0 0 / 0.28); }
+  .panel.primary { border-color: rgba(79, 193, 255, 0.48); }
+  h2 { color: var(--text); font-size: 18px; line-height: 1.3; }
+  .panel > p, .note { color: var(--muted); font-size: 14px; }
+  .outcomes { display: grid; gap: 9px; margin: 0; padding: 0; list-style: none; }
+  .outcomes li { display: grid; gap: 4px; border: 1px solid var(--border); border-radius: 8px; padding: 12px;
+                 background: rgba(255, 255, 255, 0.03); }
+  .outcomes h3 { color: var(--text); font-size: 15px; }
+  .outcomes p { color: var(--muted); font-size: 14px; }
+  .button { display: inline-flex; align-items: center; justify-content: center; justify-self: start; min-height: 44px;
+            border: 1px solid var(--accent); border-radius: 6px; padding: 0 18px; background: var(--accent);
+            color: #ffffff; font-size: 16px; font-weight: 650; text-decoration: none; }
+  .button:hover { background: #1a86dc; }
+  .button:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
+  footer { color: var(--muted); font-size: 13px; padding-top: 4px; }
+</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <span class="eyebrow">Synthetic demo paper</span>
+  <span class="badge">Open-source release coming soon</span>
+</div></header>
+<main>
+  <div>
+    <h1>Revising math papers with an AI agent</h1>
+    <p class="lead">A researcher asks a coding agent to change a LaTeX paper. The tool shows what the change affects and keeps track of the decisions still open.</p>
+  </div>
+
+  <section class="panel" aria-labelledby="shown">
+    <h2 id="shown">What the demo showed</h2>
+    <ul class="outcomes">
+      <li><h3>See what a change affects</h3><p>After one lemma changes, the tool lists the results whose proofs use that lemma, directly or through another result. Mentions of the lemma in the prose are listed separately.</p></li>
+      <li><h3>Change only what the author approved</h3><p>Only the approved lemma and its proof changed. The rest of the paper stayed as it was.</p></li>
+      <li><h3>Keep open decisions with the paper</h3><p>In a new conversation, the agent still had the open author decision and the next task.</p></li>
+    </ul>
+    <p class="note">The tool does not check that the mathematics is correct. The author makes every mathematical decision.</p>
+  </section>
+
+  <section class="panel primary" aria-labelledby="signup">
+    <h2 id="signup">Hear when the code is published</h2>
+    <p>Leave your email to get one message when the open-source release is available. The form needs no Google sign-in.</p>
+    <p class="note" id="form-pending">The sign-up form will be added to this page shortly.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="privacy">
+    <h2 id="privacy">Privacy</h2>
+    <p>Your email is used only for the release announcement. Nobody else receives it, and it is not added to any other list. Reply to the announcement to have your email removed.</p>
+  </section>
+
+  <footer>Demonstrated November 11, 2026, on a synthetic paper written for the demo.</footer>
+</main>
+</body>
+</html>
